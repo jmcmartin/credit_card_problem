@@ -1,4 +1,10 @@
-# http://itknowledgeexchange.techtarget.com/security-admin/python-check-to-see-if-a-number-passes-as-a-credit-card/
+# http://code.activestate.com/recipes/172845-python-luhn-checksum-for-credit-card-validation/
+# https://stackoverflow.com/questions/40392929/check-a-valid-credit-card-number-using-python
+
+# Instructions: https://www.braceyourself.io/public/files/apcsp/credit_card.txt
+
+import math
+
 #Number 0
 
 def count_digits(card_number):
@@ -15,7 +21,7 @@ def check_card_number(card_number):
 		if i % 2 == 0:
 			doubled_digit = (card_number[i] * 2)
 			
-			if len(doubled_digit) == 2:
+			if len(str(doubled_digit)) == 2:
 				(doubled_digit[0] + doubled_digit[1]) + sum_of_digits
 
 			else:
@@ -36,7 +42,8 @@ print check_card_number("5424180123456789")
 
 	#Method 2
 def check_card_number(card_number):
-	
+	for digit in card_number:
+		digit = card_number % 10
 
 
 print check_card_number(5424180123456789)
