@@ -1,4 +1,4 @@
-
+# http://itknowledgeexchange.techtarget.com/security-admin/python-check-to-see-if-a-number-passes-as-a-credit-card/
 #Number 0
 
 def count_digits(card_number):
@@ -9,7 +9,7 @@ print count_digits("5424180123456789")
 
 #Number 1
 	#Method 1
-"""def check_card_number(card_number):
+def check_card_number(card_number):
 	sum_of_digits = 0
 	for i in card_number:
 		if i % 2 == 0:
@@ -31,10 +31,12 @@ print count_digits("5424180123456789")
 		return "This card number is not valid: ", card_number
 
 
-print check_card_number("5424180123456789")"""
+print check_card_number("5424180123456789")
 
+
+	#Method 2
 def check_card_number(card_number):
-		
+	
 
 
 print check_card_number(5424180123456789)
